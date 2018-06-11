@@ -1,0 +1,62 @@
+@import "bulma";
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400|Roboto');
+
+.logo-brand {
+  height: 2.5em;
+}
+
+.isotipo{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  margin: 0 .2em;
+  font-size: 1.5em;
+}
+
+.section{
+  padding-top: 9em;
+  display: block;
+  text-align: center;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.rss {
+  color: #f26522;
+}
+
+.home {
+  color: #ffd257;
+}
+
+.folder {
+  color: #ff3860;
+}
+
+.email {
+  color: #00d1b2;
+}
+
+.navbar-item.is-mega {
+  position: static;
+
+  .is-mega-menu-title {
+    margin-bottom: 0;
+    padding: .375rem 1rem;
+  }
+}
+
+.heart {
+  color: #ff3860;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.suscribe-button {
+  background-color: #f26522;
+  border-color: transparent;
+  color: #fff;
+}

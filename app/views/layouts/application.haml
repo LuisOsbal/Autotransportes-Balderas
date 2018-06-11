@@ -1,0 +1,65 @@
+!!!
+%html
+  %head
+    -# Basic Needs
+    %meta{charset: "utf-8"}
+    %title= t('owner_name') + ": " + t('job')
+    %meta{ name: "description", content: t('description') }
+    %meta{ name: "author", content: t('author_name') }
+    %meta{ name: "owner", content: t('owner_name') }
+    -# Humans
+    %link{ type: "text/plain", rel: "author", href: "/humans.txt" }
+    %meta{ name: "Copyright", content: t('url') }
+    %meta{ name: "robots", content: "all", href: "/robots.txt" }
+    -# Favicons
+    %link{ rel: 'icon', type: "image/png", sizes: '16x16 32x32 48x48 64x64', href: '/favicons/favicon.ico' }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "152x152", href: "/favicons/apple-touch-icon-152x152.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "/favicons/apple-touch-icon-144x144.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "120x120", href: "/favicons/apple-touch-icon-120x120.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "/favicons/apple-touch-icon-114x114.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "76x76", href: "/favicons/apple-touch-icon-76x76.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "/favicons/apple-touch-icon-72x72.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "60x60", href: "/favicons/apple-touch-icon-60x60.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "57x57", href: "/favicons/apple-touch-icon-57x57.png" }
+    %link{ rel: "icon", type: "image/png", href: "/favicons/favicon-196x196.png", sizes: "196x196" }
+    %link{ rel: "icon", type: "image/png", href: "/favicons/favicon-128.png", sizes: "128x128" }
+    %link{ rel: "icon", type: "image/png", href: "/favicons/favicon-96x96.png", sizes: "96x96" }
+    %link{ rel: "icon", type: "image/png", href: "/favicons/favicon-32x32.png", sizes: "32x32" }
+    %link{ rel: "icon", type: "image/png", href: "/favicons/favicon-16x16.png", sizes: "16x16" }
+    %meta{ name: "application-name", content: t('author_name') }
+    %meta{ name: "msapplication-TileColor", content: "#FFFFFF" }
+    %meta{ name: "msapplication-square310x310logo", content: "mstile-310x310.png" }
+    %meta{ name: "msapplication-wide310x150logo", content: "mstile-310x150.png" }
+    %meta{ name: "msapplication-square150x150logo", content: "mstile-150x150.png" }
+    %meta{ name: "msapplication-TileImage", content: "mstile-144x144.png" }
+    %meta{ name: "msapplication-square70x70logo", content: "mstile-70x70.png" }
+    -# Mobile Specific Metas
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %meta{ 'http-equiv': "x-ua-compatible", content: "ie=edge, chrome=1" }
+    -# og tags Facebook
+    %meta{ property: "fb:admins", content: "" }
+    %meta{ property: "og:description", content: t('description') }
+    %meta{ property: "og:title", content: t('author_name') }
+    %meta{ property: "og:type", content: "website" }
+    %meta{ property: "og:url", content: t('url') }
+    %meta{ property: "og:image", content: "" }
+    %meta{ property: "og:site_name", content: t('url') }
+    -# Twitter Cards
+    %meta{ property: "twitter:account_id", content: "" }
+    %meta{ name: "twitter:card", content: "summary_large_image" }
+    %meta{ name: "twitter:site", content: t('social.twitter_user') }
+    %meta{ name: "twitter:title", content: t('author_name') }
+    %meta{ name: "twitter:description", content: t('description') }
+    %meta{ name: "twitter:creator", content: t('social.twitter_user') }
+    %meta{ name: "twitter:image:src", content: "" }
+    %meta{ name: "twitter:domain", content: t('url') }
+    -# og tags Google+
+    %meta{ itemprop: "name", content: t('author_name') }
+    %meta{ itemprop: "description", content: t('description') }
+    %meta{ itemprop: "image", content: "" }
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+  %body
+    = render template: "layouts/_nav"
+  = yield

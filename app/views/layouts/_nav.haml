@@ -1,0 +1,52 @@
+%nav#navbar.navbar.has-shadow
+  .container
+    .navbar-brand
+      %a.navbar-item{:href => "/"}
+        %img.logo-brand{:src => "http://www.luisosnet.com/assets/luisosnet-1aec758125618e192a7973bf90b47e95b6f361c6cbd97028d718fb71d03db0fc.png"}/
+        %h1.isotipo My Next Home
+      #navbarBurger.navbar-burger.burger{"data-target" => "navMenu"}
+        %span
+        %span
+        %span
+    #navMenu.navbar-menu
+      .navbar-end
+        %a.navbar-item.is-active{:href => "/"}
+          %div{:style => "position:relative"}
+            %span.icon
+              %i.fa.fas.fa-home
+            %span= t('navbar.home')
+        %a.navbar-item{:href => "#"}
+          %div{:style => "position:relative"}
+            %span.icon
+              %i.fa.fas.fa-users
+            %span= t('navbar.about_us')
+        %a.navbar-item{:href => "#"}
+          %div{:style => "position:relative"}
+            %span.icon
+              %i.fa.fas.fa-truck
+            %span= t('navbar.services')
+        %a.navbar-item{:href => "#"}
+          %div{:style => "position:relative"}
+            %span.icon
+              %i.fa.fas.fa-folder-open
+            %span= t('navbar.logistic')
+        %a.navbar-item{:href => "#"}
+          %div{:style => "position:relative"}
+            %span.icon
+              %i.fa.far.fa-envelope
+            %span= t('navbar.Contacto')
+      -#
+      -# .navbar-end
+      -#   .navbar-item
+      -#     .field.is-grouped.is-grouped-multiline
+      -#       %p.control
+      -#         %a.bd-tw-button.button.is-small{:href => "/users/sign_in"}
+      -#           %span.icon
+      -#             %i.fa.fas.fa-user
+      -#           %span Iniciar sesión
+      -#       %p.control
+      -#         %a.bd-tw-button.button.is-small.is-info{:href => "/users/sign_up"}
+      -#           %span.icon
+      -#             %i.fa.fas.fa-user-plus
+      -#           %span
+      -#             %span.translation_missing{:title => "translation missing: es.menu.buttons.sign_up"} Sign Up
