@@ -12,6 +12,8 @@
   font-size: 1.5em;
 }
 
+
+
 .section{
   padding-top: 9em;
   display: block;
@@ -59,4 +61,45 @@
   background-color: #f26522;
   border-color: transparent;
   color: #fff;
+}
+
+.white-space {
+  height: 7em;
+  background: #FFF;
+}
+
+.MainHero {
+    position: relative;
+}
+
+.MainHero #angles {
+    width: 100%;
+    height: 120%;
+    overflow: hidden;
+    transform: skewY(-12deg);
+    transform-origin: 0;
+    position: absolute;
+    box-shadow: inset 0 -10px 80px -10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(150deg, #9DC73A 15%, #64C65D 50%, #54AA4E 94%);
+    // background: linear-gradient(150deg, #75a6c7 15%, #639cc3 50%, #118fe4 94%);
+}
+
+.MainHero .animals {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://d33wubrfki0l68.cloudfront.net/assets/images/b0fd0cf4bbc8fcfe961010531926730c2c642254/animals.png");
+    background-size: cover;
+}
+
+.Mockups {
+    z-index: 1;
+    position: absolute;
+    top: 7em;
+    pointer-events: none;
+    left: 40%;
+    // width: 829px;
+    // margin-left: -10px;
+    // transform: rotate(-10deg);
+    transform-origin: 100% 0;
 }

@@ -1,0 +1,16 @@
+%section.hero.is-dark
+  .hero-body
+    .container
+      .columns
+        .column.is-8
+          %h2.title.is-2= t('hello')
+          %p
+            The
+            %span.corpo HODL
+            token has a built-in withdraw function in the smart-contract that enables on-demand, instantaneous, decentralized, 24/7 withdrawals.
+            %strong The investor automatically receives the value of their tokens
+            in ether, which is the maximum between the price of the underlying crypto assets and the token price on exchanges.
+          %div{:style => "margin-top: 20px"}
+            %a.button.is-danger.is-large{:href => "https://github.com/hodlfund/smart-contracts"}= t('call_to_action.more_information')
+        .column.is-4.has-text-centered
+          =image_tag("presupuesto.png", class: 'call-image', alt: "Autotransportes Balderas")

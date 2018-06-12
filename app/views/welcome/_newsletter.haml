@@ -1,0 +1,31 @@
+%section#newsletter.hero.is-dark
+  .hero-body
+    .container
+      / Begin MailChimp Signup Form
+      #mc_embed_signup.columns.is-vcentered
+        .column.is-one-third.is-left
+          %p.title
+            Bulma
+            %strong Newsletter
+          %p.subtitle Get notified when v1 is ready!
+        .column
+          .field.is-grouped
+            %p.control.is-expanded
+              %input.input{:placeholder => "Find a repository", :type => "text"}/
+            %p.control
+              %a.button.is-info
+                Search
+          -# %form#mc-embedded-subscribe-form.validate{:action => "https://bbxdesign.us3.list-manage.com/subscribe/post?u=b43b93fe633f0560b2a72a69c&id=52585e8803", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+          -#   #mc_embed_signup_scroll
+          -#     .control.is-grouped
+          -#       .control.has-icon.is-expanded
+          -#         %input#mce-EMAIL.input.is-flat.required.email{:name => "EMAIL", :placeholder => "email address", :required => "", :type => "email", :value => ""}
+          -#         %i.fa.fa-envelope
+          -#       .control
+          -#         %input#mc-embedded-subscribe.button.is-white.is-outlined{:name => "subscribe", :type => "submit", :value => "Subscribe"}
+          -#     #mce-responses
+          -#       #mce-error-response.notification.is-danger.response{:style => "display:none"}
+          -#       #mce-success-response.notification.is-success.response{:style => "display:none"}
+          -#     / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+          -#     %div{"aria-hidden" => "true", :style => "position: absolute; left: -5000px;"}
+          -#       %input{:name => "b_b43b93fe633f0560b2a72a69c_52585e8803", :tabindex => "-1", :type => "text", :value => ""}

@@ -15,22 +15,32 @@
             %span.icon
               %i.fa.fas.fa-home
             %span= t('navbar.home')
-        %a.navbar-item{:href => "#"}
+
+        %a.navbar-item{:href => "/#about_us"}
           %div{:style => "position:relative"}
             %span.icon
               %i.fa.fas.fa-users
             %span= t('navbar.about_us')
-        %a.navbar-item{:href => "#"}
+
+        %a.navbar-item{:href => "/#services"}
           %div{:style => "position:relative"}
             %span.icon
               %i.fa.fas.fa-truck
             %span= t('navbar.services')
-        %a.navbar-item{:href => "#"}
+
+        -# %a.navbar-item{:href => "/#logistic"}
+        -#   %div{:style => "position:relative"}
+        -#     %span.icon
+        -#       %i.fa.fas.fa-folder-open
+        -#     %span= t('navbar.logistic')
+
+        %a.navbar-item{:href => "https://medium.com/@LuisOsnet", target: "_blank"}
           %div{:style => "position:relative"}
             %span.icon
-              %i.fa.fas.fa-folder-open
-            %span= t('navbar.logistic')
-        %a.navbar-item{:href => "#"}
+              %i.fa.fas.fa-rss
+            %span= t("navbar.blog")
+
+        %a.navbar-item{:href => "/#contact"}
           %div{:style => "position:relative"}
             %span.icon
               %i.fa.far.fa-envelope

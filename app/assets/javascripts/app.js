@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Get all "navbar-burger" elements
+$( document ).on('turbolinks:load', function() {
   var $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll('.navbar-burger'), 0
   );
@@ -16,5 +15,22 @@ document.addEventListener('DOMContentLoaded', function () {
         $target.classList.toggle('is-active');
       });
     });
-  }
+  };
+
+  // It shows the effect Smooth scrolling.
+  $(function() {
+    $('a[href*=\\#]:not([href=\\#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') &&
+        location.hostname == this.hostname) {
+        var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length){
+          $('html,body').animate( {
+              scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
 });

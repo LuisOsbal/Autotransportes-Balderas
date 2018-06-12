@@ -1,0 +1,27 @@
+%section.hero#contact.is-dark
+  .hero-body
+    .container
+      %h2.title Contact
+      = simple_form_for :contact, defaults: { wrapper: false }, :url => {:action => :create, :controller => :contacts}, html: { class: "form-horizontal"} do |f|
+        .field.is-horizontal
+          .field-body
+            .field
+              %p.control.has-icons-left
+                = f.input :name, placeholder: "Nombre", input_html: { class: 'input input' }, label: false
+                %span.icon.is-small.is-left
+                  %i.fa.fas.fa-user
+            .field
+              %p.control.has-icons-left.has-icons-right
+                = f.input :email, placeholder: "Email", input_html: { class: 'input input' }, label: false
+                %span.icon.is-small.is-left
+                  %i.fa.fas.fa-envelope
+        .field.is-horizontal
+          .field-body
+            .field
+              .control
+                = f.input :message, as: :text, placeholder: "Contactame", input_html: { class: 'textarea textarea' }, label: false
+        .field.is-horizontal
+          .field-body
+            .field
+              .control
+                %button.button.is-info= t('button.send_message')

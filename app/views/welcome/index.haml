@@ -1,0 +1,31 @@
+.MainHero
+  #angles
+    .animals
+    %span
+    %span
+    %span
+    %span
+    %span
+  %section.hero.is-medium
+    .hero-body
+      .container
+        .columns
+          .column.is-6
+            %h1.title= t('owner_name')
+            %p
+              Pollygot is a content platform that consolidates all the most important services you need to run your business.
+            %p
+              %br
+              %a.button.is-danger.is-large{:href => "https://github.com/hodlfund/smart-contracts"}= t('call_to_action.more_information')
+.Mockups
+  %img{:alt => "Pollygot", :src => "http://webiconspng.com/wp-content/uploads/2017/09/Truck-PNG-Image-76474.png"}
+
+= render partial: "about_us"
+= render partial: "call_to_action"
+= render partial: "services"
+-# = render partial: "logistic"
+= render partial: "clients"
+= render partial: "newsletter"
+= render partial: "articles"
+= render partial: "contact"
+= render :partial => 'shared/drift_service'
