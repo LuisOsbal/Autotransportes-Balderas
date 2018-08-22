@@ -1,18 +1,10 @@
 @import "bulma";
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400|Roboto');
 
-.logo-brand {
-  height: 2.5em;
+.navbar-item img {
+  height: 4.5em;
+  max-height: 100%;
 }
-
-.isotipo{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  margin: 0 .2em;
-  font-size: 1.5em;
-}
-
-
 
 .section{
   padding-top: 9em;
