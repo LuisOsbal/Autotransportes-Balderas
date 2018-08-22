@@ -1,0 +1,26 @@
+.modal
+  .modal-background
+  .modal-card
+    %header.modal-card-head
+      %p.modal-card-title Modal title
+      %button.delete{"aria-label" => "close"}
+    %section.modal-card-body
+      .field
+        %label.label Nombre
+        .control
+          %input.input{:placeholder => "Text input", :type => "text"}
+      .field
+        %label.label Telefono
+        .control
+          %input.input{:placeholder => "Text input", :type => "phone"}
+      .field
+        %label.label Email
+        .control
+          %input.input{:placeholder => "Text input", :type => "email"}/
+      .field
+        %label.label Message
+        .control
+          %textarea.textarea{:placeholder => "Textarea"}
+    %footer.modal-card-foot
+      %button.button.is-success Save changes
+      %button.button.cancel Cancel

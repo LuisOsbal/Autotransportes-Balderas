@@ -1,3 +1,30 @@
+//
+// const myFunctionSpecial = (selector) => {
+//   document.querySelector(selector).addEventListener('click', (event) => {
+//       const modal = document.querySelector('.modal');  // assuming you have only 1
+//       const html = document.querySelector('html');
+//
+//       toggleClass(event);
+//       myListener('.modal-background');
+//       myListener('.delete');
+//       myListener('.cancel');
+//     });
+// }
+//
+//
+//
+// const myListener = (selectorString) => {
+//   modal.querySelector(selectorString).addEventListener('click', e => toggleClass(e));
+// }
+//
+// const toggleClass = (evento) => {
+//   evento.preventDefault();
+//   modal.classList.remove('is-active');
+//   html.classList.remove('is-clipped');
+// }
+//
+// myFunctionSpecial('.modal-button');
+
 $( document ).on('turbolinks:load', function() {
   var $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll('.navbar-burger'), 0
@@ -31,6 +58,62 @@ $( document ).on('turbolinks:load', function() {
           return false;
         }
       }
+    });
+  });
+
+
+
+
+
+  document.querySelector('.modal-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.delete').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.cancel').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  });
+
+  document.querySelector('.modal-button-2').addEventListener('click', function(event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.delete').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.cancel').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
     });
   });
 });

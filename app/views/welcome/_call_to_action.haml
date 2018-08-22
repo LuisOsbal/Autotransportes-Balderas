@@ -11,6 +11,7 @@
             %strong The investor automatically receives the value of their tokens
             in ether, which is the maximum between the price of the underlying crypto assets and the token price on exchanges.
           %div{:style => "margin-top: 20px"}
-            %a.button.is-danger.is-large{:href => "https://github.com/hodlfund/smart-contracts"}= t('call_to_action.more_information')
+            -# %a.button.is-danger.is-large{"aria-haspopup" => "true", "data-target" => "modal-ter"}= t('call_to_action.more_information')
+            %a.button.is-danger.is-large.modal-button-2{"aria-haspopup" => "true", "data-target" => "modal-ter"}= t('call_to_action.more_information')
         .column.is-4.has-text-centered
           =image_tag("presupuesto.png", class: 'call-image', alt: "Autotransportes Balderas")
